@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3k 字
+      2.8k 字
     </span>
   
 
@@ -181,7 +181,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      65
+      61
        分钟
     </span>
   
@@ -277,14 +277,11 @@ c[i + j - <span class="hljs-number">1</span>] = c[i + j - <span class="hljs-numb
 </ul>
 <h3 id="高精度数的输入和保存"><a class="markdownIt-Anchor" href="#高精度数的输入和保存"></a> 高精度数的输入和保存</h3>
 <p><code>输入要符合数字的输入规律：连续输入，中间无空格。字符串读入，数组保存。</code></p>
-<pre><code class="hljs c++"><span class="hljs-built_in">string</span> s1, s2;
-<span class="hljs-keyword">int</span> a[<span class="hljs-number">255</span>], b[<span class="hljs-number">255</span>],c[<span class="hljs-number">255</span>], la;
-<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s&quot;</span>, s1);
+<pre><code class="hljs c++"><span class="hljs-built_in">cin</span> &gt;&gt; s1 &gt;&gt; s2;
 la = s1.<span class="hljs-built_in">size</span>();
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; la; i++) <span class="hljs-comment">//字符串和字符数组从0定义</span>
-&#123;
-    a[i] = s1[la - <span class="hljs-number">1</span> - i] - <span class="hljs-string">&#x27;0&#x27;</span>;
-&#125;    </code></pre>
+lb = s2.<span class="hljs-built_in">size</span>();
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = la - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) a[la - i - <span class="hljs-number">1</span>] = s1[i] - <span class="hljs-string">&#x27;0&#x27;</span>;
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = lb - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) b[lb - i - <span class="hljs-number">1</span>] = s2[i] - <span class="hljs-string">&#x27;0&#x27;</span>;</code></pre>
 <h3 id="加法运算时的进位"><a class="markdownIt-Anchor" href="#加法运算时的进位"></a> 加法运算时的进位</h3>
 <pre><code class="hljs c++"><span class="hljs-keyword">if</span>(la &gt; lb) len = la;
 <span class="hljs-keyword">else</span> len = lb; <span class="hljs-comment">//len是较大位数</span>
@@ -367,100 +364,46 @@ m = <span class="hljs-number">0</span>;<span class="hljs-comment">//进位</span
 <li>比较 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 的大小 确定<code>结果的正负号</code> <code>谁减谁</code></li>
 </ol>
 <pre><code class="hljs c++"><span class="hljs-built_in">cin</span> &gt;&gt; s1 &gt;&gt; s2;
-<span class="hljs-keyword">if</span> (s1 == s2)
-&#123;
-    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;0&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125;
-
-la = length(s1);
-lb = length(s2);
-
-<span class="hljs-keyword">if</span> (la &lt; lb || ((la = lb) &amp;&amp; (s1 &lt; s2)))
-&#123;
-    fh = <span class="hljs-string">&#x27;-&#x27;</span>;
-    s = s1;
-    s1 = s2;
-    s2 = s;
-&#125;
-la = length(s1);
-lb = length(s2);
-len = la;<span class="hljs-comment">//len的长度较大</span></code></pre>
-<ol start="2">
-<li>借位问题 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>=</mo><mi>a</mi><mo>−</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a = a-b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span></li>
-</ol>
-<pre><code class="hljs c++">len = la;
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len; i++)
-&#123;
-    <span class="hljs-keyword">if</span> (a[i] &lt; b[i])
-    &#123;
-        a[i + <span class="hljs-number">1</span>] -= <span class="hljs-number">1</span>;
-        a[i] += <span class="hljs-number">10</span>;
-    &#125;
-    a[i] = a[i] - b[i];
-&#125;</code></pre>
-<ol start="3">
-<li>去掉结果前面多余的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></li>
-</ol>
-<pre><code class="hljs c++"><span class="hljs-keyword">while</span> (a[len] == <span class="hljs-number">0</span>)
-&#123;
-    len--;
-&#125;</code></pre>
-<h3 id="具体实现"><a class="markdownIt-Anchor" href="#具体实现"></a> 具体实现</h3>
-<pre><code class="hljs c++"><span class="hljs-built_in">string</span> s1, s2, s;
-<span class="hljs-keyword">int</span> a[<span class="hljs-number">250</span>], b[<span class="hljs-number">250</span>];
-<span class="hljs-keyword">int</span> la, lb, k;
-<span class="hljs-keyword">char</span> fh;
-
-<span class="hljs-built_in">cin</span> &gt;&gt; s1 &gt;&gt; s2;
 <span class="hljs-keyword">if</span> (s1 == s2) 
 &#123;
 	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;0&quot;</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-&#125; <span class="hljs-comment">//特殊条件</span>
+&#125;
 
-<span class="hljs-keyword">if</span> (la &lt; lb || ((la = lb) &amp;&amp; (s1 &lt; s2)))
+la = s1.<span class="hljs-built_in">size</span>();
+lb = s2.<span class="hljs-built_in">size</span>();
+
+<span class="hljs-keyword">if</span> (la &lt; lb || ((la == lb) &amp;&amp; (s1 &lt; s2)))
 &#123;
 	fh = <span class="hljs-string">&#x27;-&#x27;</span>;
     s = s1;
     s1 = s2;
     s2 = s;
 &#125;
-la = length(s1);
-lb = length(s2); <span class="hljs-comment">//判断符号 交换长度</span>
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; la; i++)
-&#123;
-	a[i] = s1[la - i - <span class="hljs-number">1</span>] - ‘<span class="hljs-number">48</span>’；
-&#125;
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; lb; j++)
-&#123;
-	b[j] = s1[lb - j - <span class="hljs-number">1</span>] - ‘<span class="hljs-number">48</span>’；
-&#125;
+la = s1.<span class="hljs-built_in">size</span>();
+lb = s2.<span class="hljs-built_in">size</span>();<span class="hljs-comment">//la绝对值大 </span>
 
-k = la - <span class="hljs-number">1</span>; <span class="hljs-comment">//初始化</span>
-
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> t = <span class="hljs-number">0</span>; t &lt;= k; t++)
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = la - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) a[la - i - <span class="hljs-number">1</span>] = s1[i] - <span class="hljs-string">&#x27;0&#x27;</span>;
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = lb - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) b[lb - i - <span class="hljs-number">1</span>] = s2[i] - <span class="hljs-string">&#x27;0&#x27;</span>;
+k = la - <span class="hljs-number">1</span>;<span class="hljs-comment">//数组从0开始</span></code></pre>
+<ol start="2">
+<li>借位问题 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>=</mo><mi>a</mi><mo>−</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a = a-b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span></li>
+</ol>
+<pre><code class="hljs c++"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> t = <span class="hljs-number">0</span>; t &lt; la; t++)
 &#123;
 	<span class="hljs-keyword">if</span> (a[t] &lt; b[t])
-    &#123;
-    	a[t + <span class="hljs-number">1</span>] -= <span class="hljs-number">1</span>;
-        a[t] += <span class="hljs-number">10</span>;
-    &#125;
-    a[t] -= b[t];
-&#125; <span class="hljs-comment">//计算</span>
-
-<span class="hljs-keyword">while</span> (a[k] == <span class="hljs-number">0</span>)
-&#123;
-	k--;
-&#125; <span class="hljs-comment">//除去前导0</span>
-
-<span class="hljs-keyword">if</span> (fh == <span class="hljs-string">&#x27;-&#x27;</span>) <span class="hljs-built_in">cout</span> &lt;&lt; fh;
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> y = k; y &gt;= <span class="hljs-number">0</span>; y--)
-<span class="hljs-built_in">cout</span> &lt;&lt; a[y]; <span class="hljs-comment">//输出</span>
-
-<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</code></pre>
+	&#123;
+		a[t + <span class="hljs-number">1</span>] -= <span class="hljs-number">1</span>;
+		a[t] += <span class="hljs-number">10</span>;
+	&#125;
+	a[t] -= b[t];
+&#125;</code></pre>
+<ol start="3">
+<li>去掉结果前面多余的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></li>
+</ol>
+<pre><code class="hljs c++"><span class="hljs-keyword">while</span> (a[k] == <span class="hljs-number">0</span>) k--;</code></pre>
 <hr />
 <h2 id="高精度乘法"><a class="markdownIt-Anchor" href="#高精度乘法"></a> 高精度乘法</h2>
 <h3 id="单精度高精度"><a class="markdownIt-Anchor" href="#单精度高精度"></a> 单精度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">×</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span>高精度</h3>
@@ -589,7 +532,6 @@ lc = la + lb;</code></pre>
 </code></pre>
 <p>除法运算的结果的位数<code>最大等于被除数的位数</code></p>
 <pre><code>3. 除法计算以及商与余数的处理
-
 参与运算的数据：
 </code></pre>
 <ul>
