@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.5k 字
+      3.2k 字
     </span>
   
 
@@ -181,7 +181,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      54
+      71
        分钟
     </span>
   
@@ -406,7 +406,7 @@ k = la - <span class="hljs-number">1</span>;<span class="hljs-comment">//数组�
 <pre><code class="hljs c++"><span class="hljs-keyword">while</span> (a[k] == <span class="hljs-number">0</span>) k--;</code></pre>
 <hr />
 <h2 id="高精度乘法"><a class="markdownIt-Anchor" href="#高精度乘法"></a> 高精度乘法</h2>
-<h3 id="单精度高精度"><a class="markdownIt-Anchor" href="#单精度高精度"></a> 单精度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">×</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span>高精度</h3>
+<h3 id="单精度高精度"><a class="markdownIt-Anchor" href="#单精度高精度"></a> 单精度×高精度</h3>
 <h4 id="方法"><a class="markdownIt-Anchor" href="#方法"></a> 方法</h4>
 <ol>
 <li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span> 的每一位都单独与 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> 相乘</li>
@@ -465,11 +465,11 @@ k = la - <span class="hljs-number">1</span>;<span class="hljs-comment">//数组�
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 &#125;</code></pre>
 <hr />
-<h3 id="高精度times高精度"><a class="markdownIt-Anchor" href="#高精度times高精度"></a> 高精度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>×</mo></mrow><annotation encoding="application/x-tex">\times</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">×</span></span></span></span>高精度</h3>
-<p>见<a href="%5Bhttps://harujeon.github.io/2020/08/03/%E6%9D%BF%E5%AD%90/%5D(https://harujeon.github.io/2020/08/03/%E6%9D%BF%E5%AD%90/)">板子</a></p>
+<h3 id="高精度高精度"><a class="markdownIt-Anchor" href="#高精度高精度"></a> 高精度×高精度</h3>
+<p>见板子</p>
 <hr />
 <h2 id="高精度除法"><a class="markdownIt-Anchor" href="#高精度除法"></a> 高精度除法</h2>
-<h3 id="高精度div单精度"><a class="markdownIt-Anchor" href="#高精度div单精度"></a> 高精度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>÷</mo></mrow><annotation encoding="application/x-tex">\div</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">÷</span></span></span></span>单精度</h3>
+<h3 id="高精度单精度"><a class="markdownIt-Anchor" href="#高精度单精度"></a> 高精度÷单精度</h3>
 <pre><code>1. 输入与储存
 </code></pre>
 <p>单精度可以直接读入，高精度的输入与存储同<code>加法运算</code>，仍用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">a[1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">[</span><span class="mord">1</span><span class="mclose">]</span></span></span></span>存储数的个位</p>
@@ -477,8 +477,8 @@ k = la - <span class="hljs-number">1</span>;<span class="hljs-comment">//数组�
 </code></pre>
 <p>除法运算的结果的位数<code>最大等于被除数的位数</code></p>
 <pre><code>3. 除法计算以及商与余数的处理
-参与运算的数据：
 </code></pre>
+<p>参与运算的数据：</p>
 <ul>
 <li>
 <p>1个不变的数：除数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span></p>
@@ -499,48 +499,60 @@ k = la - <span class="hljs-number">1</span>;<span class="hljs-comment">//数组�
     c[i] = d / b;<span class="hljs-comment">//商</span>
     d = d % b;<span class="hljs-comment">//余数</span>
 &#125;</code></pre>
-<hr />
-<pre><code>4. 结果的输出
-</code></pre>
+<pre><code class="hljs angelscript"><span class="hljs-number">4.</span>结果的输出</code></pre>
 <p>商放在数组 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span></span></span></span> 中，注意商中要去掉高位的0，确定好输出的位置，余数直接输出 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">d</span></span></span></span> 即可</p>
 <h4 id="参考程序-2"><a class="markdownIt-Anchor" href="#参考程序-2"></a> 参考程序</h4>
-<pre><code class="hljs c++"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn = <span class="hljs-number">200</span>;
-<span class="hljs-built_in">string</span> sa;<span class="hljs-comment">//被除数</span>
-<span class="hljs-keyword">int</span> b, d;<span class="hljs-comment">//b为除数，d为余数</span>
-<span class="hljs-keyword">int</span> la, len;
+<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span>
 
-<span class="hljs-built_in">cin</span> &gt;&gt; sa &gt;&gt; b;
-la = length(sa);
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = la; i &gt;= <span class="hljs-number">1</span>; i--)
-&#123;
-    a[la - i + <span class="hljs-number">1</span>] = sa[i - <span class="hljs-number">1</span>] - <span class="hljs-string">&#x27;0&#x27;</span>;
-&#125;
-len = la;
-d = <span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+	<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn = <span class="hljs-number">2000</span>;
+	<span class="hljs-built_in">string</span> sa;<span class="hljs-comment">//被除数</span>
+	<span class="hljs-keyword">int</span> b, d;<span class="hljs-comment">//b为除数，d为余数</span>
+	<span class="hljs-keyword">int</span> la, len;
+	<span class="hljs-keyword">int</span> a[maxn], c[maxn];
+	
+	<span class="hljs-built_in">cin</span> &gt;&gt; sa &gt;&gt; b;
+	
+	la = sa.<span class="hljs-built_in">size</span>();
+	
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = la; i &gt;= <span class="hljs-number">1</span>; i--)
+	&#123;
+	    a[la - i + <span class="hljs-number">1</span>] = sa[i - <span class="hljs-number">1</span>] - <span class="hljs-string">&#x27;0&#x27;</span>;
+	&#125;
+	
+	len = la;
+	d = <span class="hljs-number">0</span>;
+	
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = len; i &gt;= <span class="hljs-number">1</span>; i--)
+	&#123;
+	    d = d * <span class="hljs-number">10</span> + a[i];
+	    c[i] = d / b;<span class="hljs-comment">//商</span>
+	    d = d % b;<span class="hljs-comment">//余数</span>
+	&#125;
+	
+	<span class="hljs-keyword">while</span> (len &gt;= <span class="hljs-number">1</span> &amp;&amp; c[len] == <span class="hljs-number">0</span>)
+	    len--;
+	
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = len; k &gt;= <span class="hljs-number">1</span>; k--)
+	&#123;
+	    <span class="hljs-built_in">cout</span> &lt;&lt; c[k];
+	&#125;
+<span class="hljs-comment">//	if (d) cout &lt;&lt; &#x27;.&#x27; &lt;&lt; d &lt;&lt; endl;</span>
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = len; j &gt;= <span class="hljs-number">1</span>; j--)
-&#123;
-    d = d * <span class="hljs-number">10</span> + a[i];
-    c[i] = d / b;<span class="hljs-comment">//商</span>
-    d = d % b;<span class="hljs-comment">//余数</span>
-&#125;
-
-<span class="hljs-keyword">while</span> (len &gt;= <span class="hljs-number">1</span> &amp;&amp; c[len] == <span class="hljs-number">0</span>)
-    len--;
-
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> k = len; k &gt;= <span class="hljs-number">1</span>; k--)
-&#123;
-    <span class="hljs-built_in">cout</span> &lt;&lt; c[k];
-&#125;
-<span class="hljs-built_in">cout</span> &lt;&lt; d &lt;&lt; <span class="hljs-built_in">endl</span>;</code></pre>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
 <p>在做两个<code>高精度数</code>运算时，存储高精度数的数组元素可以不仅仅只保留一个数字，而采取保留<code>多位数</code></p>
 <p>这样，在做运算（特别是乘法运算）时，可以减少很多操作次数</p>
-<h3 id="高精度div高精度"><a class="markdownIt-Anchor" href="#高精度div高精度"></a> 高精度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>÷</mo></mrow><annotation encoding="application/x-tex">\div</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">÷</span></span></span></span>高精度</h3>
+<h3 id="高精度高精度-2"><a class="markdownIt-Anchor" href="#高精度高精度-2"></a> 高精度÷高精度</h3>
 <ol>
 <li>输入与储存</li>
 </ol>
-<p>高精度的输入与存储同<code>加法运算</code>，仍用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">a[1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">[</span><span class="mord">1</span><span class="mclose">]</span></span></span></span>存储数的个位</p>
+<p>仍用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">a[1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">[</span><span class="mord">1</span><span class="mclose">]</span></span></span></span>存储数的个位</p>
 <ol start="2">
 <li>计算结果的位数</li>
 </ol>
@@ -569,115 +581,294 @@ d = <span class="hljs-number">0</span>;
 </li>
 </ol>
 <h4 id="参考程序-3"><a class="markdownIt-Anchor" href="#参考程序-3"></a> 参考程序</h4>
-<pre><code class="hljs c++"><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> maxn = <span class="hljs-number">200</span>;
-<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">hp</span></span>
-<span class="hljs-class">&#123;</span>
-    <span class="hljs-keyword">int</span> len, s[maxn];
-&#125;;<span class="hljs-comment">//结构体在全局里？如何初始化？？？</span>
+<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;  </span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;  </span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;  </span></span>
 
-<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">hp</span> <span class="hljs-title">y</span>, <span class="hljs-title">w</span>, <span class="hljs-title">x</span>[2];</span><span class="hljs-comment">//x:x[1]被除数，x[2]除数；y商；w余数</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
 
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-keyword">const</span> struct hp p)</span><span class="hljs-comment">//const???</span></span>
-<span class="hljs-function"></span>&#123;
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = p.len; i &gt;= <span class="hljs-number">1</span>; i--)
-    &#123;
-        <span class="hljs-built_in">cout</span> &lt;&lt; p.s[i];
-    &#125;
-&#125;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> N = <span class="hljs-number">100001</span>;
+<span class="hljs-keyword">int</span> a[N], b[N], res[N * <span class="hljs-number">2</span>];
+<span class="hljs-keyword">char</span> x[N], y[N];
+<span class="hljs-keyword">int</span> la, lb;
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span>
 <span class="hljs-function"></span>&#123;
-    <span class="hljs-built_in">string</span> st;
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= <span class="hljs-number">2</span>; j++)
-    &#123;
-        <span class="hljs-built_in">cin</span> &gt;&gt; st;<span class="hljs-comment">//读入数串：j = 1时读入被除数，j = 2时读入除数</span>
-        x[j].len = length(st);
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= x[j].len; i++)<span class="hljs-comment">//存入数组</span>
-        &#123;
-            x[j].s[i] = st[x[j].len - i] - <span class="hljs-string">&#x27;0&#x27;</span>;
-        &#125;
-    &#125;
+	la = <span class="hljs-built_in">strlen</span>(x);
+	lb = <span class="hljs-built_in">strlen</span>(y);
+	<span class="hljs-built_in">memset</span>(a,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span>(a));  
+    <span class="hljs-built_in">memset</span>(b,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span>(b)); 
+    <span class="hljs-built_in">memset</span>(res,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span>(res)); 
+    
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = la - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) a[la - i - <span class="hljs-number">1</span>] = x[i] - <span class="hljs-string">&#x27;0&#x27;</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = lb - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) b[lb - i - <span class="hljs-number">1</span>] = y[i] - <span class="hljs-string">&#x27;0&#x27;</span>; <span class="hljs-comment">//从0开始</span>
 &#125;
 
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sub</span><span class="hljs-params">(struct hp a, struct hp b, struct hp c)</span><span class="hljs-comment">//高精度减法 c = a - b</span></span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">substraction</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *p1,<span class="hljs-keyword">int</span> *p2,<span class="hljs-keyword">int</span> len1,<span class="hljs-keyword">int</span> len2)</span></span>
+<span class="hljs-function"><span class="hljs-comment">//计算长度为len1的大整数减去长度为len2的大整数的结果的长度 </span></span>
 <span class="hljs-function"></span>&#123;
-    <span class="hljs-keyword">int</span> len;
-    <span class="hljs-keyword">if</span> (a.len &gt; b.len)
-        len = a.len;
-    <span class="hljs-keyword">else</span> len = b.len;
-
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= len; i++)
-    &#123;
-        c.s[i] += a.s[i] - b.s[i];
-        <span class="hljs-keyword">if</span> (c.s[i] &lt; <span class="hljs-number">0</span>)
-        &#123;
-            c.s[i] += <span class="hljs-number">10</span>;
-            c.s[i + <span class="hljs-number">1</span>]--;
-        &#125;
-    &#125;
-
-    <span class="hljs-keyword">while</span> (len &gt; <span class="hljs-number">1</span> &amp;&amp; c.s[len] == <span class="hljs-number">0</span>) len--; <span class="hljs-comment">//去高位的0</span>
-    c.len = len;
+	<span class="hljs-comment">//减的结果放在数组p1中，不够返回-1,正好返回0 </span>
+	<span class="hljs-keyword">if</span> (len1 &lt; len2) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+	<span class="hljs-keyword">bool</span> flag = <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">if</span> (len1 == len2)
+	&#123;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = len1 - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--)
+		&#123;
+			<span class="hljs-keyword">if</span> (p1[i] &gt; p2[i]) flag = <span class="hljs-number">1</span>;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (p1[i] &lt; p2[i])
+			&#123;
+				<span class="hljs-keyword">if</span> (!flag) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+			&#125;
+		&#125;
+	&#125;
+	
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len1; i++)
+	&#123;
+		p1[i] -= p2[i];
+		<span class="hljs-keyword">if</span> (p1[i] &lt; <span class="hljs-number">0</span>)
+		&#123;
+			p1[i] += <span class="hljs-number">10</span>;
+			p1[i + <span class="hljs-number">1</span>]--;
+		&#125;
+	&#125;
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = len1 - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--)
+	&#123;
+		<span class="hljs-keyword">if</span> (p1[i]) <span class="hljs-keyword">return</span> i + <span class="hljs-number">1</span>;
+	&#125;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 &#125;
 
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(<span class="hljs-keyword">const</span> struct hp a, <span class="hljs-keyword">const</span> struct hp b)</span><span class="hljs-comment">//比较</span></span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">output</span><span class="hljs-params">()</span></span>
 <span class="hljs-function"></span>&#123;
-    <span class="hljs-keyword">int</span> len;
-    <span class="hljs-keyword">if</span> (a.len &gt; b.len) len = a.len;
-    <span class="hljs-keyword">else</span> len = b.len;
-    <span class="hljs-keyword">while</span>(len &gt; <span class="hljs-number">0</span> &amp;&amp; a.s[len] = b.s[len]) len--;
-    <span class="hljs-keyword">if</span> (len == <span class="hljs-number">0</span>)
-        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> (a.s[len] - b.s[len]);
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; N; i++)
+	&#123;
+		<span class="hljs-keyword">if</span> (res[i] &gt;= <span class="hljs-number">10</span>)<span class="hljs-comment">//进位 </span>
+		&#123;
+			res[i + <span class="hljs-number">1</span>] += res[i] / <span class="hljs-number">10</span>;
+			res[i] %= <span class="hljs-number">10</span>;
+		&#125;
+	&#125;
+	
+	<span class="hljs-keyword">bool</span> flag = <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = N - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--)
+	&#123;
+		<span class="hljs-keyword">if</span> (flag) <span class="hljs-built_in">cout</span> &lt;&lt; res[i];
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (res[i])
+		&#123;
+			<span class="hljs-built_in">cout</span> &lt;&lt; res[i];
+			flag = <span class="hljs-number">1</span>;
+		&#125;
+	&#125;
+	
+	<span class="hljs-keyword">if</span> (!flag) <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">0</span>;
+	
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
 &#125;
 
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mul</span><span class="hljs-params">(struct hp a)</span><span class="hljs-comment">//高精度乘法 a *= 10</span></span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">divv</span><span class="hljs-params">()</span></span>
 <span class="hljs-function"></span>&#123;
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = a.len; i &gt;= <span class="hljs-number">1</span>; i--)
-        a.s[i + <span class="hljs-number">1</span>] = a.[i];
-
-    a.s[<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>;<span class="hljs-comment">//千万别忘！！！</span>
-    a.len++;
-
-    <span class="hljs-keyword">while</span> (a.len &gt; <span class="hljs-number">1</span> &amp;&amp; a.s[a.len] == <span class="hljs-number">0</span>)
-        a.len--;
-&#125;
-
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">div</span><span class="hljs-params">(struct hp a, struct hp b)</span></span>
-<span class="hljs-function"></span>&#123;
-    <span class="hljs-keyword">int</span> len;
-    <span class="hljs-built_in">memset</span> (c, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(c));
-    len = a.len;
-    <span class="hljs-built_in">memset</span> (d, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(d));
-    d.len = <span class="hljs-number">1</span>;
-
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = len; i &gt;= <span class="hljs-number">1</span>; i--)
-    &#123;
-        mul(d);<span class="hljs-comment">//余数*10</span>
-        d.s[<span class="hljs-number">1</span>] = a.s[<span class="hljs-number">1</span>];<span class="hljs-comment">//被除数的当前位赋给余数的第一位</span>
-
-        <span class="hljs-keyword">while</span> (compare(d, b) &gt;= <span class="hljs-number">0</span>)
-        &#123;
-            sub(d, b, d);<span class="hljs-comment">//高精度减法：余数d = 余数d - 除数b</span>
-            c.s[i]++;<span class="hljs-comment">//商c当前位+1</span>
-        &#125;
-    &#125;
-
-    <span class="hljs-keyword">while</span> (len &gt; <span class="hljs-number">1</span> &amp;&amp; c.s[len] == <span class="hljs-number">0</span>) len--;
-    c.len = len;
+	init();
+	
+	<span class="hljs-keyword">if</span> (la &lt; lb)
+	&#123;
+		<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">0</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+	
+	la = substraction(a, b, la, lb);
+	<span class="hljs-keyword">if</span> (la &lt; <span class="hljs-number">0</span>)
+	&#123;
+		<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">0</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (la == <span class="hljs-number">0</span>)
+	&#123;
+		<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+	
+	res[<span class="hljs-number">0</span>]++;<span class="hljs-comment">//减掉一次了，商+1</span>
+	<span class="hljs-keyword">int</span> k = la - lb;
+	<span class="hljs-keyword">if</span> (k &lt; <span class="hljs-number">0</span>)<span class="hljs-comment">//减一次后不能再减了 </span>
+	&#123;
+		output();
+		<span class="hljs-keyword">return</span>;
+	&#125;
+	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (k &gt; <span class="hljs-number">0</span>)<span class="hljs-comment">//将数组b乘以10的某次幂，使得其长度与数组a相同</span>
+	&#123;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = la - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--)
+		&#123;
+			<span class="hljs-keyword">if</span> (i &gt;= k) b[i] = b[i - k];
+			<span class="hljs-keyword">else</span> b[i] = <span class="hljs-number">0</span>;
+		&#125;
+	&#125;
+	
+	lb = la;
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= k; i++)<span class="hljs-comment">//先减去若干个b*(10^k)，不够减了再减去若干个b*(10^(k-1))</span>
+	&#123;
+		<span class="hljs-keyword">int</span> temp;
+		<span class="hljs-keyword">while</span> ((temp = substraction(a, b + i, la, lb - i)) &gt;= <span class="hljs-number">0</span>)<span class="hljs-comment">//一直减到不够减为止</span>
+		&#123;
+			la = temp;
+			res[k - i]++; <span class="hljs-comment">//每成功减一次，则商的相应位+1</span>
+		&#125;
+	&#125;
+	output();
 &#125;
 
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
 <span class="hljs-function"></span>&#123;
-    init();
-    div(x[<span class="hljs-number">1</span>], x[<span class="hljs-number">2</span>], y, w);
-    <span class="hljs-built_in">print</span>(y);
-    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
-    <span class="hljs-built_in">print</span>(w);
-    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
-
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s %s&quot;</span>, x, y); 
+	divv();
+	<span class="hljs-comment">//init();</span>
+	<span class="hljs-comment">//for (int i = 0; i &lt; la; i++) cout &lt;&lt; a[i];</span>
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 &#125;</code></pre>
+<hr />
+<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;  </span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;  </span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;  </span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> N = <span class="hljs-number">100001</span>;
+<span class="hljs-keyword">int</span> a[N], b[N], res[N * <span class="hljs-number">2</span>];
+<span class="hljs-keyword">char</span> x[N], y[N];
+<span class="hljs-keyword">int</span> la, lb;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+	la = <span class="hljs-built_in">strlen</span>(x);
+	lb = <span class="hljs-built_in">strlen</span>(y);
+	<span class="hljs-built_in">memset</span>(a,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span>(a));  
+    <span class="hljs-built_in">memset</span>(b,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span>(b)); 
+    <span class="hljs-built_in">memset</span>(res,<span class="hljs-number">0</span>,<span class="hljs-keyword">sizeof</span>(res)); 
+    
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = la - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) a[la - i] = x[i] - <span class="hljs-string">&#x27;0&#x27;</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = lb - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) b[lb - i] = y[i] - <span class="hljs-string">&#x27;0&#x27;</span>;<span class="hljs-comment">//从1开始</span>
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">substraction</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *p1,<span class="hljs-keyword">int</span> *p2,<span class="hljs-keyword">int</span> len1,<span class="hljs-keyword">int</span> len2)</span></span>
+<span class="hljs-function"><span class="hljs-comment">//计算长度为len1的大整数减去长度为len2的大整数的结果的长度 </span></span>
+<span class="hljs-function"></span>&#123;
+	<span class="hljs-comment">//减的结果放在数组p1中，不够返回-1,正好返回0 </span>
+	<span class="hljs-keyword">if</span> (len1 &lt; len2) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+	<span class="hljs-keyword">bool</span> flag = <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">if</span> (len1 == len2)
+	&#123;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = len1; i &gt;= <span class="hljs-number">1</span>; i--)
+		&#123;
+			<span class="hljs-keyword">if</span> (p1[i] &gt; p2[i]) flag = <span class="hljs-number">1</span>;
+			<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (p1[i] &lt; p2[i])
+			&#123;
+				<span class="hljs-keyword">if</span> (!flag) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+			&#125;
+		&#125;
+	&#125;
+	
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= len1; i++)
+	&#123;
+		p1[i] -= p2[i];
+		<span class="hljs-keyword">if</span> (p1[i] &lt; <span class="hljs-number">0</span>)
+		&#123;
+			p1[i] += <span class="hljs-number">10</span>;
+			p1[i + <span class="hljs-number">1</span>]--;
+		&#125;
+	&#125;
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = len1; i &gt;= <span class="hljs-number">1</span>; i--)
+	&#123;
+		<span class="hljs-keyword">if</span> (p1[i]) <span class="hljs-keyword">return</span> i;
+	&#125;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">output</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= N; i++)
+	&#123;
+		<span class="hljs-keyword">if</span> (res[i] &gt;= <span class="hljs-number">10</span>)<span class="hljs-comment">//进位 </span>
+		&#123;
+			res[i + <span class="hljs-number">1</span>] += res[i] / <span class="hljs-number">10</span>;
+			res[i] %= <span class="hljs-number">10</span>;
+		&#125;
+	&#125;
+	
+	<span class="hljs-keyword">bool</span> flag = <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = N; i &gt;= <span class="hljs-number">1</span>; i--)
+	&#123;
+		<span class="hljs-keyword">if</span> (flag) <span class="hljs-built_in">cout</span> &lt;&lt; res[i];
+		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (res[i])
+		&#123;
+			<span class="hljs-built_in">cout</span> &lt;&lt; res[i];
+			flag = <span class="hljs-number">1</span>;
+		&#125;
+	&#125;
+	
+	<span class="hljs-keyword">if</span> (!flag) <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">0</span>;
+	
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">divv</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+	init();
+	
+	<span class="hljs-keyword">if</span> (la &lt; lb)
+	&#123;
+		<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">0</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+	
+	la = substraction(a, b, la, lb);
+	<span class="hljs-keyword">if</span> (la &lt; <span class="hljs-number">0</span>)
+	&#123;
+		<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">0</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (la == <span class="hljs-number">0</span>)
+	&#123;
+		<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-built_in">endl</span>;
+		<span class="hljs-keyword">return</span>;
+	&#125;
+	
+	res[<span class="hljs-number">1</span>]++;<span class="hljs-comment">//减掉一次了，商+1</span>
+	<span class="hljs-keyword">int</span> k = la - lb;
+	<span class="hljs-keyword">if</span> (k &lt; <span class="hljs-number">0</span>)<span class="hljs-comment">//减一次后不能再减了 </span>
+	&#123;
+		output();
+		<span class="hljs-keyword">return</span>;
+	&#125;
+	<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (k &gt; <span class="hljs-number">0</span>)<span class="hljs-comment">//将数组b乘以10的某次幂，使得其长度与数组a相同</span>
+	&#123;
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = la; i &gt;= <span class="hljs-number">1</span>; i--)
+		&#123;
+			<span class="hljs-keyword">if</span> (i &gt; k) b[i] = b[i - k];
+			<span class="hljs-keyword">else</span> b[i] = <span class="hljs-number">0</span>;
+		&#125;
+	&#125;
+	
+	lb = la;
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= k; i++)<span class="hljs-comment">//先减去若干个b*(10^k)，不够减了再减去若干个b*(10^(k-1))</span>
+	&#123;
+		<span class="hljs-keyword">int</span> temp;
+		<span class="hljs-keyword">while</span> ((temp = substraction(a, b + i, la, lb - i)) &gt;= <span class="hljs-number">0</span>)<span class="hljs-comment">//一直减到不够减为止</span>
+		&#123;
+			la = temp;
+			res[k - i + <span class="hljs-number">1</span>]++; <span class="hljs-comment">//每成功减一次，则商的相应位+1</span>
+		&#125;
+	&#125;
+	output();
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%s %s&quot;</span>, x, y); 
+	divv();
+	<span class="hljs-comment">//init();</span>
+	<span class="hljs-comment">//for (int i = 0; i &lt; la; i++) cout &lt;&lt; a[i];</span>
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+
             </div>
             <hr>
             <div>
