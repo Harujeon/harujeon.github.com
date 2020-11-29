@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      935 字
+      911 字
     </span>
   
 
@@ -181,7 +181,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      20
+      19
        分钟
     </span>
   
@@ -226,30 +226,21 @@
     <span class="hljs-keyword">var</span> b = random(a);
     <span class="hljs-keyword">return</span> b = b / Math.pow(<span class="hljs-number">10</span>, m);
 &#125;</code></pre>
-<p>用<code>var</code>类型预先不用知道变量的类型；根据给变量赋值来判定变量属于什么类型；如</p>
-<pre><figcaption><span>a </span></figcaption><code class="hljs var">
-
-
-&#96;&#96;&#96;var a &#x3D; “qwer”;&#96;&#96;&#96; 则$a$是字符型
-
-使用Var类型要注意：
-
-1. 必须在定义时初始化，即不能先定义后初始化，如：&#96;&#96;&#96;var a；a &#x3D; 1；&#96;&#96;&#96; 这样是不允许的
-2. 一旦初始化完成，不能再给变量赋与初始化不同的变量
-3. &#96;&#96;&#96;var&#96;&#96;&#96;类型的变量必须是**局部变量**
-
-
-
-#### 返回一个n到m之间的随机数
-
-&#96;&#96;&#96;C#
-function randomNm(n, m)
-&#123;
-    if(m &gt;&#x3D; n)
+<p>用<code>var</code>类型预先不用知道变量的类型；根据给变量赋值来判定变量属于什么类型；如<code>var a =1;</code>  则<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span>是整型<code>var a = “qwer”;</code> 则<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span></span></span></span>是字符型</p>
+<p>使用Var类型要注意：</p>
+<ol>
+<li>必须在定义时初始化，即不能先定义后初始化，如：<code>var a；a = 1；</code> 这样是不允许的</li>
+<li>一旦初始化完成，不能再给变量赋与初始化不同的变量</li>
+<li><code>var</code>类型的变量必须是<strong>局部变量</strong></li>
+</ol>
+<h4 id="返回一个n到m之间的随机数"><a class="markdownIt-Anchor" href="#返回一个n到m之间的随机数"></a> 返回一个n到m之间的随机数</h4>
+<pre><code class="hljs C#"><span class="hljs-function">function <span class="hljs-title">randomNm</span>(<span class="hljs-params">n, m</span>)</span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-keyword">if</span>(m &gt;= n)
     &#123;
-        return random(m - n + 1) + n;&#x2F;&#x2F;加上1使得m也能在里面
+        <span class="hljs-keyword">return</span> random(m - n + <span class="hljs-number">1</span>) + n;<span class="hljs-comment">//加上1使得m也能在里面</span>
     &#125;
-    else return false;
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
 &#125;</code></pre>
 <h4 id="返回一个字母"><a class="markdownIt-Anchor" href="#返回一个字母"></a> 返回一个字母</h4>
 <pre><code class="hljs c#"><span class="hljs-function">function <span class="hljs-title">randomAscii</span>(<span class="hljs-params"></span>)</span>
@@ -380,6 +371,12 @@ function randomNm(n, m)
                 <div class="post-prevnext row">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2020/11/29/%E8%AE%A1%E7%AE%97%E5%99%A8/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">计算器</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#998796">
+  <meta name="description" content="">
+  <meta name="author" content="Harujeon">
+  <meta name="keywords" content="">
+  <title>计算器 - Harujeon in Wonderland</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Harujeon</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-11-29 15:26" pubdate>
+      2020年11月29日 下午
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      35
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">计算器</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <pre><code class="hljs C#"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Collections.Generic;
+<span class="hljs-keyword">using</span> System.Linq;
+<span class="hljs-keyword">using</span> System.Text;
+<span class="hljs-keyword">using</span> System.Text.RegularExpressions;
+<span class="hljs-keyword">using</span> System.Threading.Tasks;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">Exp6_3</span>
+&#123;
+    <span class="hljs-keyword">class</span> <span class="hljs-title">Calculate</span>
+    &#123;
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">bool</span>  <span class="hljs-title">checkRules</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> exp</span>) <span class="hljs-comment">// 判断字符串是否合法</span></span>
+<span class="hljs-function"></span>        &#123;
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">string</span>.IsNullOrWhiteSpace(exp)) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <span class="hljs-comment">//判断对象是否为Null和空白字符</span>
+            <span class="hljs-comment">//去掉空格</span>
+            <span class="hljs-keyword">string</span> noblank = Regex.Replace(exp, <span class="hljs-string">&quot; &quot;</span>, <span class="hljs-string">&quot;&quot;</span>); <span class="hljs-comment">//在指定的输入字符串中，把所有匹配正则表达式模式的所有匹配的字符串替换为指定的替换字符串。</span>
+
+            <span class="hljs-comment">//表达式字符串规则</span>
+            <span class="hljs-keyword">string</span> no0 = <span class="hljs-string">@&quot;[^\d\*\^\(\)+-/.]&quot;</span>;  <span class="hljs-comment">//不能出现运算符+-*/^、圆括号()、数字、小数点.之外的字符</span>
+            <span class="hljs-keyword">string</span> no1 = <span class="hljs-string">@&quot;^[^\d\(-]&quot;</span>;          <span class="hljs-comment">//开头不能是数字、左圆括号(、负号- 以外的字符</span>
+            <span class="hljs-keyword">string</span> no2 = <span class="hljs-string">@&quot;[^\d\)]$&quot;</span>;           <span class="hljs-comment">//结束不能是数字、右圆括号) 以外的字符</span>
+            <span class="hljs-keyword">string</span> no3 = <span class="hljs-string">@&quot;[\*\^+-/]&#123;2&#125;&quot;</span>;       <span class="hljs-comment">//+-*/^不能连续出现</span>
+            <span class="hljs-keyword">string</span> no4 = <span class="hljs-string">@&quot;[\D][.]|[.]\D&quot;</span>;      <span class="hljs-comment">//小数点前面或后面不能出现非数字字符</span>
+            <span class="hljs-keyword">string</span> no5 = <span class="hljs-string">@&quot;\)[\d\(]|[^\d\)]\)&quot;</span>; <span class="hljs-comment">//右圆括号)后面不能出现数字、左圆括号(,前面不能出现除数字或右圆括号)以外的字符</span>
+            <span class="hljs-keyword">string</span> no6 = <span class="hljs-string">@&quot;\([^\d\(-]|[\d]\(&quot;</span>;  <span class="hljs-comment">//左圆括号(后面不能出现除数字、左圆括号(、负号以外的字符,前面不能出现数字</span>
+            <span class="hljs-comment">//正则表达式中有可能出现一些与C#语言相同的字符,比如&quot;\&quot;,会让编译器作为C#语言来识别,截断该字符串,并可能产生编译器错误</span>
+            <span class="hljs-comment">//在该字符串前加一个&quot;@&quot;就是告诉编译器,这些特殊字符是作为字符串中的一部分存在的,编译器就不会去编译它了</span>
+            <span class="hljs-comment">// ^定位点 匹配必须从字符串或一行的开头开始</span>
+            <span class="hljs-comment">// [character_group] 匹配 character_group 中的任何单个字符。 默认情况下，匹配区分大小写。</span>
+            <span class="hljs-comment">// [^character_group] 非：与不在 character_group 中的任何单个字符匹配 区分大小写。</span>
+            <span class="hljs-comment">// $ 匹配必须出现在字符串的末尾或出现在行或字符串末尾的 \n 之前</span>
+            <span class="hljs-comment">//&#123; n &#125; 匹配上一个元素恰好 n 次</span>
+            
+            <span class="hljs-keyword">string</span> pattern = no0 + <span class="hljs-string">&quot;|&quot;</span> + no1 + <span class="hljs-string">&quot;|&quot;</span> + no2 + <span class="hljs-string">&quot;|&quot;</span> + no3 + <span class="hljs-string">&quot;|&quot;</span> + no4 + <span class="hljs-string">&quot;|&quot;</span> + no5 + <span class="hljs-string">&quot;|&quot;</span> + no6;
+            <span class="hljs-keyword">if</span> (Regex.IsMatch(noblank, pattern)) <span class="hljs-comment">//指定的正则表达式是否在指定的输入字符串中找到匹配项，从字符串中指定的开始位置开始</span>
+            &#123;
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+            &#125;
+
+            <span class="hljs-comment">//左圆括号(和右圆括号)必须成对出现</span>
+            <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">char</span> c <span class="hljs-keyword">in</span> noblank)
+            &#123;
+                <span class="hljs-keyword">if</span> (c == <span class="hljs-string">&#x27;)&#x27;</span>)
+                &#123;
+                    count++;
+                    <span class="hljs-keyword">continue</span>;
+                &#125;
+
+                <span class="hljs-keyword">if</span> (c == <span class="hljs-string">&#x27;(&#x27;</span>)
+                &#123;
+                    count--;
+                    <span class="hljs-keyword">continue</span>;
+                &#125;
+            &#125;
+            <span class="hljs-keyword">if</span> (count != <span class="hljs-number">0</span>)
+            &#123;
+                Console.WriteLine(<span class="hljs-string">&quot;左右括号不匹配&quot;</span>);
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+            &#125;
+
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        &#125;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">string</span>[] <span class="hljs-title">toStrings</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> exp</span>) <span class="hljs-comment">// 分割成分 把数字和其它字符分隔开</span></span>
+<span class="hljs-function"></span>        &#123;
+            <span class="hljs-comment">//如果要修改字符串而不创建新的对象，则可以使用System.Text.StringBuilder类</span>
+            <span class="hljs-comment">//String声明之后在内存中大小是不可修改的，而StringBuilder可以自由扩展大小(String分配在栈区，StringBuilder分配在堆区)</span>
+            StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder(exp);
+            <span class="hljs-comment">//去掉空格</span>
+            sb.Replace(<span class="hljs-string">&quot; &quot;</span>, <span class="hljs-string">&quot;&quot;</span>);
+
+            <span class="hljs-comment">//负号与减号相同，不能与数字分开，需要特许处理：</span>
+            <span class="hljs-comment">//1、字符串第一个&quot;-&quot;是负号</span>
+            <span class="hljs-comment">//2、紧跟在&quot;(&quot;后面的&quot;-&quot;是负号</span>
+            <span class="hljs-comment">//3、如果负号后面直接跟着&quot;(&quot;，把负号改为&quot;-1*&quot;。目的是把取负运算（单目运算）变成乘法运算（双目运算），免得以后要区分减法和取负。</span>
+            <span class="hljs-comment">//4、把负号统一改为&quot;?&quot;			</span>
+            <span class="hljs-keyword">if</span> (sb[<span class="hljs-number">0</span>] == <span class="hljs-string">&#x27;-&#x27;</span>)
+            &#123;
+                sb[<span class="hljs-number">0</span>] = <span class="hljs-string">&#x27;?&#x27;</span>;
+            &#125;
+
+            sb.Replace(<span class="hljs-string">&quot;(-&quot;</span>, <span class="hljs-string">&quot;(?&quot;</span>);
+            sb.Replace(<span class="hljs-string">&quot;?(&quot;</span>, <span class="hljs-string">&quot;?1*(&quot;</span>);
+
+            <span class="hljs-comment">//添加分割符&#x27;,&#x27;把数字和其它字符分隔开。</span>
+            sb.Replace(<span class="hljs-string">&quot;+&quot;</span>, <span class="hljs-string">&quot;,+,&quot;</span>);
+            sb.Replace(<span class="hljs-string">&quot;-&quot;</span>, <span class="hljs-string">&quot;,-,&quot;</span>);
+            sb.Replace(<span class="hljs-string">&quot;*&quot;</span>, <span class="hljs-string">&quot;,*,&quot;</span>);
+            sb.Replace(<span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-string">&quot;,/,&quot;</span>);
+            sb.Replace(<span class="hljs-string">&quot;(&quot;</span>, <span class="hljs-string">&quot;(,&quot;</span>);
+            sb.Replace(<span class="hljs-string">&quot;)&quot;</span>, <span class="hljs-string">&quot;,)&quot;</span>);
+            sb.Replace(<span class="hljs-string">&quot;^&quot;</span>, <span class="hljs-string">&quot;,^,&quot;</span>);
+
+            <span class="hljs-comment">//分割之后，把&#x27;?&#x27;恢复成减号 &#x27;-&#x27;</span>
+            sb.Replace(<span class="hljs-string">&#x27;?&#x27;</span>, <span class="hljs-string">&#x27;-&#x27;</span>);
+
+            <span class="hljs-keyword">return</span> sb.ToString().Split(<span class="hljs-string">&#x27;,&#x27;</span>);
+        &#125;
+
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getOrder</span>(<span class="hljs-params"><span class="hljs-keyword">char</span> oprator</span>) <span class="hljs-comment">//获取运算符的优先级</span></span>
+<span class="hljs-function"></span>        &#123;
+            <span class="hljs-keyword">switch</span> (oprator)
+            &#123;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;+&#x27;</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;-&#x27;</span>:
+                    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;*&#x27;</span>:
+                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;/&#x27;</span>:
+                    <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;^&#x27;</span>:
+                    <span class="hljs-keyword">return</span> <span class="hljs-number">5</span>;			
+                <span class="hljs-keyword">default</span>:
+                    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+            &#125;
+
+        &#125;
+
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">string</span>[] <span class="hljs-title">toRPN</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] expStrings</span>) <span class="hljs-comment">// 转为后缀表达式</span></span>
+<span class="hljs-function"></span>        &#123;
+            Stack&lt;<span class="hljs-keyword">string</span>&gt; stack = <span class="hljs-keyword">new</span> Stack&lt;<span class="hljs-keyword">string</span>&gt;();
+            List&lt;<span class="hljs-keyword">string</span>&gt; rpn = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-keyword">string</span>&gt;();
+            <span class="hljs-comment">//基本思路：</span>
+            <span class="hljs-comment">//遍历expStrings中的字符串：</span>
+            <span class="hljs-comment">//1、如果不是字符（即数字）就直接放到列表rpn中；</span>
+            <span class="hljs-comment">//2、如果是字符：</span>
+            <span class="hljs-comment">//2.1、如果stack为空，把字符压入stack中；</span>
+            <span class="hljs-comment">//2.2、如果stack不为空，把栈中优先级大于等于该字符的运算符全部弹出(直到碰到&#x27;(&#x27;或stack为空)，放到rpn中；</span>
+            <span class="hljs-comment">//2.2 如果字符是&#x27;(&#x27;，直接压入</span>
+            <span class="hljs-comment">//2.3 如果是&#x27;)&#x27;，依次弹出stack中的字符串放入rpn中，直到碰到&#x27;(&#x27;,弹出并抛弃&#x27;(&#x27;；</span>
+
+            <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">string</span> item <span class="hljs-keyword">in</span> expStrings)
+            &#123;
+                <span class="hljs-comment">//1、处理&quot;(&quot;</span>
+                <span class="hljs-keyword">if</span> (item == <span class="hljs-string">&quot;(&quot;</span>)
+                &#123;
+                    stack.Push(item);
+                    <span class="hljs-keyword">continue</span>;
+                &#125;
+                <span class="hljs-comment">//2、处理运算符 +-*/^</span>
+                <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;+-*/^&quot;</span>.Contains(item)) <span class="hljs-comment">// .contains() 判断一个元素内是否包含另一个元素</span>
+                &#123;
+                    <span class="hljs-keyword">if</span> (stack.Count == <span class="hljs-number">0</span>)
+                    &#123;
+                        stack.Push(item);
+                        <span class="hljs-keyword">continue</span>;
+                    &#125;
+                    <span class="hljs-keyword">if</span> (getOrder(item[<span class="hljs-number">0</span>]) &gt; getOrder(stack.Peek()[<span class="hljs-number">0</span>])) <span class="hljs-comment">// peek 不改变栈的值(不删除栈顶的值) string[0]首位 当字符看</span>
+                    &#123;
+                        stack.Push(item);
+                        <span class="hljs-keyword">continue</span>;
+                    &#125;
+                    <span class="hljs-keyword">else</span>
+                    &#123;
+                        <span class="hljs-keyword">while</span> (stack.Count &gt; <span class="hljs-number">0</span> &amp;&amp; getOrder(stack.Peek()[<span class="hljs-number">0</span>]) &gt;= getOrder(item[<span class="hljs-number">0</span>]) &amp;&amp; stack.Peek() != <span class="hljs-string">&quot;(&quot;</span>)
+                        &#123;
+                            rpn.Add(stack.Pop());
+                        &#125;
+                        stack.Push(item);
+                        <span class="hljs-keyword">continue</span>;
+                    &#125;
+                &#125;
+                <span class="hljs-comment">//3、处理&quot;)&quot;</span>
+                <span class="hljs-keyword">if</span> (item == <span class="hljs-string">&quot;)&quot;</span>)
+                &#123;
+                    <span class="hljs-keyword">while</span> (stack.Peek() != <span class="hljs-string">&quot;(&quot;</span>)
+                    &#123;
+                        rpn.Add(stack.Pop());
+                    &#125;
+                    stack.Pop();<span class="hljs-comment">//抛弃&quot;(&quot;</span>
+                    <span class="hljs-keyword">continue</span>;
+                &#125;
+                <span class="hljs-comment">//4、数据，直接放入rpn中</span>
+                rpn.Add(item);
+            &#125;
+            <span class="hljs-comment">//最后把stack中的运算符全部输出到rpn</span>
+            <span class="hljs-keyword">while</span> (stack.Count &gt; <span class="hljs-number">0</span>)
+            &#123;
+                rpn.Add(stack.Pop());
+            &#125;
+            <span class="hljs-comment">//把字符串链表转换成字符串数组，并输出。</span>
+            <span class="hljs-keyword">return</span> rpn.ToArray(); <span class="hljs-comment">// 将rpn转为数组</span>
+
+        &#125;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">Compute</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> exp</span>)</span>
+<span class="hljs-function"></span>        &#123;
+            <span class="hljs-keyword">if</span> (!checkRules(exp))
+            &#123;
+                <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> FormatException(<span class="hljs-string">&quot;字符串为空或不合法&quot;</span>);
+            &#125;
+            <span class="hljs-comment">//先把字符串转换成后缀表达式字符串数组</span>
+            <span class="hljs-keyword">string</span>[] rpn = toRPN(toStrings(exp));
+            <span class="hljs-comment">//再计算后缀表达式</span>
+            Stack&lt;<span class="hljs-keyword">double</span>&gt; stack = <span class="hljs-keyword">new</span> Stack&lt;<span class="hljs-keyword">double</span>&gt;(); <span class="hljs-comment">//存放参与计算的数值、中间值、结果	</span>
+            <span class="hljs-comment">//算法：利用foreach来扫描后缀表达式字符串数组，得到数值则直接压入栈中，</span>
+            <span class="hljs-comment">//得到运算符则从栈顶取出两个数值进行运算，并把结果压入栈中。最终栈中留下一个数值，为计算结果。</span>
+            <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">string</span> oprator <span class="hljs-keyword">in</span> rpn)
+            &#123;
+                <span class="hljs-comment">//为什么总是弹出两个数值？因为都是双目运算。</span>
+                <span class="hljs-comment">//先弹出的是运算符右边的数，弹出两个数值后注意运算顺序。				</span>
+                <span class="hljs-keyword">switch</span> (oprator)
+                &#123;
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;+&quot;</span>:
+                        <span class="hljs-comment">//如果读取到运算符，则从stack中取出两个数值进行运算，并把运算结果压入stack。下同。</span>
+                        stack.Push(stack.Pop() + stack.Pop());
+                        <span class="hljs-keyword">break</span>;
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;-&quot;</span>:
+                        stack.Push(-stack.Pop() + stack.Pop());
+                        <span class="hljs-keyword">break</span>;
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;*&quot;</span>:
+                        stack.Push(stack.Pop() * stack.Pop());
+                        <span class="hljs-keyword">break</span>;
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;/&quot;</span>:
+                        &#123;
+                            <span class="hljs-keyword">double</span> right = stack.Pop();
+                            <span class="hljs-keyword">try</span> <span class="hljs-comment">//一个方法使用 try 和 catch 关键字捕获异常</span>
+                            &#123;
+                                stack.Push(stack.Pop() / right);
+                            &#125;
+                            <span class="hljs-keyword">catch</span> (Exception e)
+                            &#123;
+                                <span class="hljs-keyword">throw</span> e;   <span class="hljs-comment">//除数为0时产生异常。</span>
+                            &#125;
+
+                            <span class="hljs-keyword">break</span>;
+                        &#125;
+                    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;^&quot;</span>:
+                        &#123;
+                            <span class="hljs-keyword">double</span> right = stack.Pop();
+                            stack.Push(Math.Pow(stack.Pop(), right));
+                            <span class="hljs-keyword">break</span>;
+                        &#125;
+
+                    <span class="hljs-keyword">default</span>: <span class="hljs-comment">//后缀表达式数组中只有运算符和数值，没有圆括号。除了运算符，剩下的就是数值了</span>
+                        stack.Push(<span class="hljs-keyword">double</span>.Parse(oprator));  <span class="hljs-comment">//如果读取到数值，则压入stack中</span>
+                        <span class="hljs-keyword">break</span>;
+                &#125;
+            &#125;
+            <span class="hljs-comment">//弹出最后的计算值并返回</span>
+            <span class="hljs-keyword">return</span> stack.Pop();
+        &#125;
+    &#125;
+&#125;
+
+</code></pre>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/29/C-%E6%A2%A6%E6%B8%B8%E8%AE%A1%E5%88%92/">
+                        <span class="hidden-mobile">C#梦游计划</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 3,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "计算器&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- KaTeX -->
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.11.1/katex.min.css" />
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
